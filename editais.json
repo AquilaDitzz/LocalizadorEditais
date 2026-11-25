@@ -1,0 +1,155 @@
+[
+  {
+    "id": "edital-001",
+    "titulo": "Chamada Pública PNAE 01/2026 — Alimentação Escolar",
+    "orgao": "Prefeitura Municipal de Domingos Martins",
+    "programa": "PNAE",
+    "municipio": "Domingos Martins",
+    "uf": "ES",
+    "dias_para_encerrar": 4,
+    "valor_estimado": 185000.00,
+    "resumo": "Aquisição de hortifrúti direto da agricultura familiar para as escolas municipais da rede de ensino.",
+    "link_pdf": "https://exemplo.gov.br/edital-001.pdf",
+    "itens": [
+      { "nome": "Alface Crespa", "unidade": "maço", "quantidade": 1200, "preco_ref": 4.50 },
+      { "nome": "Tomate Salada", "unidade": "kg", "quantidade": 800, "preco_ref": 7.80 },
+      { "nome": "Cenoura", "unidade": "kg", "quantidade": 900, "preco_ref": 5.20 },
+      { "nome": "Morango", "unidade": "bandeja 250g", "quantidade": 1500, "preco_ref": 6.90 },
+      { "nome": "Inhame", "unidade": "kg", "quantidade": 1000, "preco_ref": 6.40 }
+    ]
+  },
+  {
+    "id": "edital-002",
+    "titulo": "Chamada Pública PNAE 03/2026 — Gêneros da Agricultura Familiar",
+    "orgao": "Secretaria Municipal de Educação de Vila Velha",
+    "programa": "PNAE",
+    "municipio": "Vila Velha",
+    "uf": "ES",
+    "dias_para_encerrar": 8,
+    "valor_estimado": 642000.00,
+    "resumo": "Compra de frutas, verduras, legumes e panificados para a alimentação escolar das unidades municipais de ensino (UMEIs e UMEFs).",
+    "link_pdf": "https://exemplo.gov.br/edital-002.pdf",
+    "itens": [
+      { "nome": "Banana Prata", "unidade": "kg", "quantidade": 12000, "preco_ref": 5.10 },
+      { "nome": "Mamão Formosa", "unidade": "kg", "quantidade": 6000, "preco_ref": 4.80 },
+      { "nome": "Couve Manteiga", "unidade": "maço", "quantidade": 4000, "preco_ref": 3.90 },
+      { "nome": "Abóbora Cabotiá", "unidade": "kg", "quantidade": 5000, "preco_ref": 4.20 },
+      { "nome": "Pão Caseiro", "unidade": "kg", "quantidade": 3500, "preco_ref": 18.50 },
+      { "nome": "Ovos Caipira", "unidade": "dúzia", "quantidade": 4000, "preco_ref": 14.00 }
+    ]
+  },
+  {
+    "id": "edital-003",
+    "titulo": "PAA Compra com Doação Simultânea — Termo de Adesão 2026",
+    "orgao": "Prefeitura Municipal de Cariacica — Secretaria de Assistência Social",
+    "programa": "PAA",
+    "municipio": "Cariacica",
+    "uf": "ES",
+    "dias_para_encerrar": 14,
+    "valor_estimado": 320000.00,
+    "resumo": "Aquisição de alimentos da agricultura familiar para doação a entidades socioassistenciais, restaurantes populares e bancos de alimentos.",
+    "link_pdf": "https://exemplo.gov.br/edital-003.pdf",
+    "itens": [
+      { "nome": "Aipim (Mandioca)", "unidade": "kg", "quantidade": 8000, "preco_ref": 3.80 },
+      { "nome": "Feijão Preto", "unidade": "kg", "quantidade": 5000, "preco_ref": 9.50 },
+      { "nome": "Banana da Terra", "unidade": "kg", "quantidade": 6000, "preco_ref": 5.60 },
+      { "nome": "Quiabo", "unidade": "kg", "quantidade": 2000, "preco_ref": 8.20 },
+      { "nome": "Tomate Salada", "unidade": "kg", "quantidade": 4000, "preco_ref": 7.50 }
+    ]
+  },
+  {
+    "id": "edital-004",
+    "titulo": "Chamada Pública 02/2026 — Compra Direta para o Hospital Estadual",
+    "orgao": "Secretaria de Estado da Saúde do Espírito Santo (SESA)",
+    "programa": "Compra Direta",
+    "municipio": "Vitória",
+    "uf": "ES",
+    "dias_para_encerrar": 22,
+    "valor_estimado": 410000.00,
+    "resumo": "Compra institucional de gêneros alimentícios da agricultura familiar para as cozinhas de unidades hospitalares da Grande Vitória (Decreto nº 11.476/2023).",
+    "link_pdf": "https://exemplo.gov.br/edital-004.pdf",
+    "itens": [
+      { "nome": "Batata Inglesa", "unidade": "kg", "quantidade": 10000, "preco_ref": 5.40 },
+      { "nome": "Cebola", "unidade": "kg", "quantidade": 6000, "preco_ref": 5.90 },
+      { "nome": "Laranja Pera", "unidade": "kg", "quantidade": 9000, "preco_ref": 3.70 },
+      { "nome": "Iogurte Natural", "unidade": "litro", "quantidade": 4000, "preco_ref": 12.00 },
+      { "nome": "Queijo Minas Frescal", "unidade": "kg", "quantidade": 1500, "preco_ref": 42.00 }
+    ]
+  },
+  {
+    "id": "edital-005",
+    "titulo": "Chamada Pública PNAE 05/2026 — Escolas Estaduais (SRE Carapina)",
+    "orgao": "Secretaria de Estado da Educação (SEDU) — Superintendência Regional de Carapina",
+    "programa": "PNAE",
+    "municipio": "Serra",
+    "uf": "ES",
+    "dias_para_encerrar": 30,
+    "valor_estimado": 528000.00,
+    "resumo": "Aquisição de gêneros alimentícios da agricultura familiar e do empreendedor familiar rural para as escolas estaduais do município da Serra.",
+    "link_pdf": "https://exemplo.gov.br/edital-005.pdf",
+    "itens": [
+      { "nome": "Banana Prata", "unidade": "kg", "quantidade": 9000, "preco_ref": 5.00 },
+      { "nome": "Goiaba", "unidade": "kg", "quantidade": 3000, "preco_ref": 7.20 },
+      { "nome": "Polpa de Fruta (Acerola)", "unidade": "kg", "quantidade": 2500, "preco_ref": 16.00 },
+      { "nome": "Alface Crespa", "unidade": "maço", "quantidade": 5000, "preco_ref": 4.20 },
+      { "nome": "Mel de Abelha", "unidade": "kg", "quantidade": 600, "preco_ref": 45.00 },
+      { "nome": "Café Torrado e Moído", "unidade": "kg", "quantidade": 1200, "preco_ref": 48.00 }
+    ]
+  },
+  {
+    "id": "edital-006",
+    "titulo": "Chamada Pública PNAE 02/2026 — Alimentação Escolar (Encerrada)",
+    "orgao": "Prefeitura Municipal de Santa Teresa",
+    "programa": "PNAE",
+    "municipio": "Santa Teresa",
+    "uf": "ES",
+    "dias_para_encerrar": -2,
+    "valor_estimado": 96000.00,
+    "resumo": "Aquisição de hortifrutigranjeiros e produtos da agroindústria familiar para as escolas municipais de Santa Teresa.",
+    "link_pdf": "https://exemplo.gov.br/edital-006.pdf",
+    "itens": [
+      { "nome": "Brócolis", "unidade": "maço", "quantidade": 1500, "preco_ref": 6.50 },
+      { "nome": "Repolho", "unidade": "kg", "quantidade": 2000, "preco_ref": 3.40 },
+      { "nome": "Socol (embutido artesanal)", "unidade": "kg", "quantidade": 150, "preco_ref": 95.00 },
+      { "nome": "Biscoito Caseiro", "unidade": "kg", "quantidade": 800, "preco_ref": 26.00 }
+    ]
+  },
+  {
+    "id": "edital-007",
+    "titulo": "PAA Leite e Derivados — Chamada Pública 01/2026",
+    "orgao": "Prefeitura Municipal de Alfredo Chaves",
+    "programa": "PAA",
+    "municipio": "Alfredo Chaves",
+    "uf": "ES",
+    "dias_para_encerrar": 3,
+    "valor_estimado": 74000.00,
+    "resumo": "Aquisição de leite, derivados e hortaliças de agricultores familiares locais para distribuição a famílias em situação de insegurança alimentar.",
+    "link_pdf": "https://exemplo.gov.br/edital-007.pdf",
+    "itens": [
+      { "nome": "Leite Pasteurizado", "unidade": "litro", "quantidade": 9000, "preco_ref": 4.90 },
+      { "nome": "Queijo Minas Frescal", "unidade": "kg", "quantidade": 400, "preco_ref": 40.00 },
+      { "nome": "Inhame", "unidade": "kg", "quantidade": 1500, "preco_ref": 6.00 },
+      { "nome": "Gengibre", "unidade": "kg", "quantidade": 500, "preco_ref": 12.00 }
+    ]
+  },
+  {
+    "id": "edital-008",
+    "titulo": "Chamada Pública 04/2026 — Compra Direta para Restaurante Universitário",
+    "orgao": "Instituto Federal do Espírito Santo (Ifes) — Campus Guarapari",
+    "programa": "Compra Direta",
+    "municipio": "Guarapari",
+    "uf": "ES",
+    "dias_para_encerrar": 45,
+    "valor_estimado": 138000.00,
+    "resumo": "Compra institucional de alimentos da agricultura familiar para o refeitório estudantil, com prioridade a produtos orgânicos e agroecológicos.",
+    "link_pdf": "https://exemplo.gov.br/edital-008.pdf",
+    "itens": [
+      { "nome": "Cenoura Orgânica", "unidade": "kg", "quantidade": 1200, "preco_ref": 7.50 },
+      { "nome": "Tomate Cereja Orgânico", "unidade": "kg", "quantidade": 600, "preco_ref": 14.00 },
+      { "nome": "Couve Manteiga", "unidade": "maço", "quantidade": 1800, "preco_ref": 4.00 },
+      { "nome": "Aipim (Mandioca)", "unidade": "kg", "quantidade": 2500, "preco_ref": 4.00 },
+      { "nome": "Ovos Caipira", "unidade": "dúzia", "quantidade": 1500, "preco_ref": 15.00 },
+      { "nome": "Palmito Pupunha", "unidade": "kg", "quantidade": 400, "preco_ref": 38.00 }
+    ]
+  }
+]

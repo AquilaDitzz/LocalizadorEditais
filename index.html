@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Radar de Editais: encontre Chamadas Públicas do PNAE, PAA e compras institucionais compatíveis com a sua produção.">
+  <meta name="theme-color" content="#1B4332">
+  <title>Radar de Editais — Agricultura Familiar</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo__marca">
+      <span class="topo__icone" aria-hidden="true">🌱</span>
+      <div>
+        <h1>Radar de Editais</h1>
+        <p class="topo__sub">Chamadas públicas para a agricultura familiar</p>
+      </div>
+    </div>
+    <nav class="abas" role="tablist" aria-label="Seções">
+      <button class="aba ativa" role="tab" id="tab-radar" aria-controls="painel-radar" aria-selected="true" data-aba="radar">
+        <span aria-hidden="true">🔍</span> <span class="aba__txt">Radar de Editais</span>
+      </button>
+      <button class="aba" role="tab" id="tab-meus" aria-controls="painel-meus" aria-selected="false" data-aba="meus">
+        <span aria-hidden="true">📋</span> <span class="aba__txt">Meus Editais</span>
+        <span class="contador" id="contador-meus" aria-label="editais acompanhados">0</span>
+      </button>
+      <button class="aba" role="tab" id="tab-perfil" aria-controls="painel-perfil" aria-selected="false" data-aba="perfil">
+        <span aria-hidden="true">👨‍🌾</span> <span class="aba__txt">Meu Perfil</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <!-- ABA 1: RADAR -->
+    <section id="painel-radar" class="painel ativo" role="tabpanel" aria-labelledby="tab-radar">
+      <div id="fonte-dados" class="fonte" role="status" aria-live="polite" hidden></div>
+
+      <div id="aviso-perfil" class="aviso" hidden>
+        <span aria-hidden="true">💡</span>
+        <p>Cadastre os produtos que você cultiva em <button class="link-btn" data-ir-aba="perfil">Meu Perfil</button> para ver quais editais combinam com a sua produção.</p>
+      </div>
+
+      <form class="filtros" id="filtros" onsubmit="return false">
+        <label class="campo campo--busca">
+          <span class="campo__rotulo">Buscar</span>
+          <input type="search" id="f-busca" placeholder="Produto, órgão ou município…" autocomplete="off">
+        </label>
+        <label class="campo">
+          <span class="campo__rotulo">Programa</span>
+          <select id="f-programa">
+            <option value="">Todos</option>
+            <option value="PNAE">PNAE</option>
+            <option value="PAA">PAA</option>
+            <option value="Compra Direta">Compra Direta</option>
+          </select>
+        </label>
+        <label class="campo">
+          <span class="campo__rotulo">Município</span>
+          <select id="f-municipio">
+            <option value="">Todos</option>
+          </select>
+        </label>
+        <label class="campo">
+          <span class="campo__rotulo">Ordenar por</span>
+          <select id="f-ordem">
+            <option value="prazo">Prazo mais próximo</option>
+            <option value="match">Mais compatível comigo</option>
+            <option value="valor">Maior valor</option>
+          </select>
+        </label>
+        <div class="chaves">
+          <label class="chave"><input type="checkbox" id="f-compativeis"> Só compatíveis com minha produção</label>
+          <label class="chave"><input type="checkbox" id="f-encerrados"> Mostrar encerrados</label>
+        </div>
+      </form>
+
+      <p class="resumo-lista" id="resumo-radar" aria-live="polite"></p>
+      <div class="lista" id="lista-radar"></div>
+    </section>
+
+    <!-- ABA 2: MEUS EDITAIS -->
+    <section id="painel-meus" class="painel" role="tabpanel" aria-labelledby="tab-meus" hidden>
+      <p class="resumo-lista" id="resumo-meus"></p>
+      <div class="lista" id="lista-meus"></div>
+    </section>
+
+    <!-- ABA 3: PERFIL -->
+    <section id="painel-perfil" class="painel" role="tabpanel" aria-labelledby="tab-perfil" hidden>
+      <form class="cartao perfil" id="form-perfil">
+        <h2>👨‍🌾 Meu Perfil</h2>
+        <p class="ajuda">Seus dados ficam salvos apenas neste aparelho (não são enviados para nenhum servidor).</p>
+
+        <label class="campo">
+          <span class="campo__rotulo">Nome ou nome da associação/cooperativa</span>
+          <input type="text" id="p-nome" autocomplete="name" placeholder="Ex.: Maria da Silva">
+        </label>
+
+        <div class="linha-uf">
+          <label class="campo">
+            <span class="campo__rotulo">Município onde produz</span>
+            <input type="text" id="p-municipio" list="lista-municipios" placeholder="Ex.: Domingos Martins">
+            <datalist id="lista-municipios"></datalist>
+          </label>
+          <label class="campo campo--uf">
+            <span class="campo__rotulo">Estado (UF)</span>
+            <select id="p-uf" aria-describedby="ajuda-uf"></select>
+          </label>
+        </div>
+        <p class="ajuda ajuda--campo" id="ajuda-uf">O Radar busca no PNCP as chamadas públicas do estado escolhido.</p>
+
+        <fieldset class="campo">
+          <legend class="campo__rotulo">Tipo de fornecedor</legend>
+          <div class="opcoes">
+            <label class="opcao"><input type="radio" name="p-tipo" value="individual" checked> Agricultor(a) individual</label>
+            <label class="opcao"><input type="radio" name="p-tipo" value="grupo-informal"> Grupo informal</label>
+            <label class="opcao"><input type="radio" name="p-tipo" value="grupo-formal"> Associação / Cooperativa</label>
+          </div>
+        </fieldset>
+
+        <label class="chave chave--bloco">
+          <input type="checkbox" id="p-caf"> Tenho CAF (ou DAP) ativa
+        </label>
+
+        <div class="campo">
+          <label class="campo__rotulo" for="p-produto-novo">O que você produz?</label>
+          <div class="add-produto">
+            <input type="text" id="p-produto-novo" list="lista-produtos" placeholder="Ex.: tomate, banana, ovos…">
+            <datalist id="lista-produtos"></datalist>
+            <button type="button" class="btn btn--secundario" id="btn-add-produto">Adicionar</button>
+          </div>
+          <ul class="etiquetas" id="p-produtos" aria-label="Produtos cadastrados"></ul>
+          <div class="sugestoes" id="p-sugestoes" aria-label="Sugestões rápidas"></div>
+        </div>
+
+        <div class="acoes">
+          <button type="submit" class="btn btn--primario">Salvar perfil</button>
+          <button type="button" class="btn btn--perigo" id="btn-limpar">Apagar meus dados</button>
+        </div>
+        <p class="ok" id="perfil-ok" role="status" hidden>✅ Perfil salvo!</p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Detalhe do edital -->
+  <dialog id="modal" class="modal" aria-labelledby="modal-titulo">
+    <div class="modal__corpo" id="modal-corpo"></div>
+  </dialog>
+
+  <footer class="rodape">
+    <p>Dados do <a href="https://pncp.gov.br" target="_blank" rel="noopener noreferrer">Portal Nacional de Contratações Públicas (PNCP)</a>, com editais de demonstração quando offline. Confira sempre o edital oficial antes de participar.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
